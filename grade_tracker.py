@@ -10,8 +10,9 @@ def view_students():
     if not students:
         print('Nothing here yet.')
 
-    for name, grade in students.items():
-        print(f'-{name}: {grade}')
+    else:
+        for name, grade in students.items():
+            print(f'-{name}: {grade}')
 
 def get_highest():
     highest_grade = max(students.values())
@@ -30,7 +31,7 @@ def stats_students():
         highest_name, highest_grade = get_highest()
         lowest_name, lowest_grade = get_lowest()
 
-        print(f'Average: {average}')
+        print(f'Average: {average:.1f}')
 
         print(f'Highest: {','.join(highest_name)} ({highest_grade})')
         print(f'Lowest: {','.join(lowest_name)} ({lowest_grade})')
